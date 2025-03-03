@@ -19,12 +19,13 @@ using namespace std;
 // int sumN(int n){
 //   int sum = 0;
 
-//   for (int i = 1; i <=n ; i++){
+//   for (int i = 1; i <=n ; i++)
 //     sum += i;
 //   }
 
 //   return sum;
 // }
+
 
 // calculate N factorial
 int factorial(int n){
@@ -38,6 +39,44 @@ int factorial(int n){
 }
 
 
+// caclulate ncr binomial coeffcient for n & r 
+int nCr(int n , int r){
+  int fac_n = factorial(n);
+  int fac_r = factorial(r);
+
+  int fact_nmr = factorial(n - r);
+
+  return fac_n / (fac_r * fact_nmr);
+}
+
+
+
+
+// // sum of digite
+// int subOfDigit(int num){
+//   int digitSum = 0;
+//   while (num > 0)
+//   {
+//     int lastDig = num % 10;
+//     num /= 10;
+//     digitSum += lastDig;
+
+//   }
+
+//   return digitSum;
+// }
+
+
+
+// void fun(){
+//   int x = 25;
+//   cout << "x  " << x << endl;
+// }
+
+
+
+
+
 int main(){
 
  // funtion call / invoke
@@ -45,6 +84,13 @@ int main(){
 
 //  cout << sum(10, 5) << endl;
 
- cout << factorial(5) << endl;
+//  cout << factorial(5) << endl;
+ cout << nCr(5,2) << endl;
+
+//  cout << subOfDigit(159) << endl;
+
+//  fun();
+
+
  return 0;
 }
